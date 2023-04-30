@@ -8,6 +8,14 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use('/static', express.static(path.join(__dirname, 'public')))
 
+app.use(express.static(__dirname + '/public', { 
+  setHeaders: (res, path) => {
+    if (path.endsWith('.js')) {
+      res.setHeader('Content-Type', 'text/javascript');
+    }
+  }
+}));
+
 // Rutas
 app.use('/', require('./routes/routes'));
 
