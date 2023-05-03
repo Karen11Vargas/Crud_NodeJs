@@ -6,12 +6,12 @@ const conexion = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'crud_nodejs'
+    database: 'karen'
 })
-   
+
 //Capture error
 
-conexion.connect((error)=>{
+conexion.connect((error) => {
     if (error) {
         console.error('El error es:' + error);
         return
