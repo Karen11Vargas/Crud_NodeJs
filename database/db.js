@@ -8,10 +8,10 @@ const conexion = mysql.createConnection({
     password: '',
     database: 'crud_nodejs'
 })
-   
+
 //Capture error
 
-conexion.connect((error)=>{
+conexion.connect((error) => {
     if (error) {
         console.error('El error es:' + error);
         return
