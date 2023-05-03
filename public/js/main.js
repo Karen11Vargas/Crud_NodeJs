@@ -10,4 +10,3 @@ function confirmarDelte(id){
         }
       })
 }
-
