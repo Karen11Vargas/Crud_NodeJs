@@ -48,8 +48,9 @@ router.get('/delete/:id', (req, res)=>{
 
 //Ruta metodos crud
 const crud = require('../controllers/crud');
+router.post('/edit/:id/:usuario/:rol', crud.update);
+
 router.post('/save', crud.save);
-router.post('/edit', crud.update);
 
   
   
