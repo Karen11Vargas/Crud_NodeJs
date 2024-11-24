@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+require('dotenv').config();
 
 
 // // Middleware
@@ -29,7 +30,7 @@ app.use((req, res, next) =>{
 })
 
 // Configuración
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 
 //Lo que hace es escuchar a traves de que puerto se esta ejecutando 
 app.listen(PORT, () => {
